@@ -21,25 +21,25 @@ modules:
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
     inputs:
-    outputs:
-      - name: resource_group_name
-      - name: resource_group_id
-  - name: basic-cos-storage
-    module_type: terraform
-    source:
-      source_type: github
-      git:
-        git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-Storage"
-        git_branch: main
-    inputs:
-      - name: cos_instance_name
-        value: $blueprint.cos_instance_name
-      - name: cos_storage_plan
-        value: $blueprint.cos_storage_plan
-      - name: cos_single_site_loc
-        value: "ams03"
-      - name: resource_group_id
-        value: $module.basic-resource-group.outputs.resource_group_id
+#     outputs:
+#       - name: resource_group_name
+#       - name: resource_group_id
+#   - name: basic-cos-storage
+#     module_type: terraform
+#     source:
+#       source_type: github
+#       git:
+#         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-Storage"
+#         git_branch: main
+#     inputs:
+#       - name: cos_instance_name
+#         value: $blueprint.cos_instance_name
+#       - name: cos_storage_plan
+#         value: $blueprint.cos_storage_plan
+#       - name: cos_single_site_loc
+#         value: "ams03"
+#       - name: resource_group_id
+#         value: $module.basic-resource-group.outputs.resource_group_id
     outputs:
       - name: cos_id
       - name: cos_crn
