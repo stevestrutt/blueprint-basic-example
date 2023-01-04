@@ -8,7 +8,7 @@ inputs:
   - name: cos_storage_plan
 outputs:
   - name: cos_id
-    value: $module.basic-cos-storage1.outputs.cos_id
+    value: $module.basic-cos-storage.outputs.cos_id
 settings:
   - name: TF_VERSION
     value: 1.0
@@ -21,8 +21,6 @@ modules:
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
     inputs:
-      - name: any
-        value: any
     outputs:
       - name: resource_group_name
       - name: resource_group_id
