@@ -21,7 +21,7 @@ modules:
         git_repo_url: "https://github.com/Cloud-Schematics/blueprint-example-modules/tree/main/IBM-DefaultResourceGroup"
         git_branch: main
     inputs:
-      - name: cos_instance_name
+      - name: name
         value: $blueprint.cos_instance_name
     outputs:
       - name: resource_group_name
